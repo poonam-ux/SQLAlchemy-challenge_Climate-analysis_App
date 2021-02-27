@@ -152,8 +152,8 @@ december_temp_list = [temp.tobs for temp in december_temp]
 december_avg = np.mean(december_temp_list)
 print(f"Average temperature for December: {december_avg}")
 ```
-Average temperature for June: 74.94411764705882
-Average temperature for December: 71.04152933421226
+#### Average temperature for June: 74.94411764705882
+#### Average temperature for December: 71.04152933421226
 
 * Using an unpaired t-test makes sense for this part of the analysis. Here, the means of June and December temperatures in Hawaii are compared (two different populations). The unpaired t-test is used to compare the means of two independent populations. The paired t-test (one sample t-test) is used to compare the sample to the population, which is not useful here.
 
@@ -218,7 +218,7 @@ results = session.query(*sel).\
             group_by(Station.name).order_by(func.sum(Measurement.prcp).desc()).all()
 print(results)
 ```
-![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/station_obsv_descending_order.png)
+![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_rainfall_station_avg.png)
 
 * Calculated daily normal for the desired trip dates(2018-08-01 to 2018-08-08)
 
