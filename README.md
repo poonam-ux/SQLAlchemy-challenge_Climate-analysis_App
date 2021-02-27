@@ -60,6 +60,7 @@ plt.savefig("Images/last_year_precipitation.png", bbox_inches = "tight")
 
 prec_data_df.describe()
 ```
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/last_year_precipitation_small.png)
 
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/summary_stats_precipitation.png)
@@ -77,6 +78,7 @@ station_count = session.query(func.count(Station.station)).all()
 active_stations = session.query(Measurement.station, func.count(Measurement.station)).\
                 group_by(Measurement.station).order_by(func.count(Measurement.station).desc()).all()
 ```
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/station_obsv_descending_order.png)
 
 The most active station is `USC00519281` (It has the highest number of observations.)
@@ -96,6 +98,7 @@ temp_obsv = session.query(Measurement.tobs).filter(Measurement.station =='USC005
 ```
 
 * Plotted the results as a histogram with bins=12.
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/temp_most_active_station_small.png)
 
 ## Step 2 - Climate App
@@ -203,6 +206,7 @@ plt.savefig("Images/Trip_Avg_Temp.png", bbox_inches = 'tight')
 fig.tight_layout()
 fig.show()
 ```
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/Trip_Avg_Temp.png)
 
 ### Daily Rainfall Average
@@ -222,6 +226,7 @@ results = session.query(*sel).\
             group_by(Station.name).order_by(func.sum(Measurement.prcp).desc()).all()
 print(results)
 ```
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_rainfall_station_avg.png)
 
 * Calculated daily normal for the desired trip dates(2018-08-01 to 2018-08-08)
@@ -244,6 +249,7 @@ for date in trip_month_day:
     normals.append(*daily_normals(date))
 normals 
 ```
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_normals_desired_trip_dates.png)
 
 * Used Pandas to plot an area plot (stacked=False) for the daily normal.
@@ -259,5 +265,3 @@ plt.tight_layout()
 ```
 
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_normals_desired_dates_small.png)
-
-![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_rainfall_avg%20copy.png)
