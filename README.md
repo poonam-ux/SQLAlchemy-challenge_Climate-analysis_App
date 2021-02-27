@@ -158,6 +158,7 @@ print(f"Average temperature for December: {december_avg}")
 * Average temperature for June: 74.94411764705882
 * Average temperature for December: 71.04152933421226
 
+### Analysis
 * Using an unpaired t-test makes sense for this part of the analysis. Here, the means of June and December temperatures in Hawaii are compared (two different populations). The unpaired t-test is used to compare the means of two independent populations. The paired t-test (one sample t-test) is used to compare the sample to the population, which is not useful here.
 
 ### Temperature Analysis II
