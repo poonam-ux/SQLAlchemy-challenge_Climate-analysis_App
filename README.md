@@ -78,6 +78,7 @@ active_stations = session.query(Measurement.station, func.count(Measurement.stat
                 group_by(Measurement.station).order_by(func.count(Measurement.station).desc()).all()
 ```
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/station_obsv_descending_order.png)
+
 The most active station is `USC00519281` (It has the highest number of observations.)
 
 * Calculated the lowest, highest, and average temperature using func.min, func.max, func.avg, and func.count for the most active station id.
@@ -88,6 +89,7 @@ session.query(func.min(Measurement.tobs), func.max(Measurement.tobs),\
 ```
 
 * Designed a query to retrieve the last 12 months of temperature observation data (TOBS) and filter by the most active station (station with the highest number of observations).
+
 ```
 temp_obsv = session.query(Measurement.tobs).filter(Measurement.station =='USC00519281').\
              filter(Measurement.date >= date_last_year).all()
