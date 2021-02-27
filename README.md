@@ -257,4 +257,7 @@ plt.xlabel("Date",fontsize=15)
 plt.savefig("./Images/daily_rainfall_avg.png", bbox_inches = "tight")
 plt.tight_layout()
 ```
+
+![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_normals_desired_dates_small.png)
+
 ![](https://github.com/poonam-ux/SQLAlchemy-challenge_Climate-analysis_App/blob/main/Images/daily_rainfall_avg%20copy.png)
