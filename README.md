@@ -8,7 +8,7 @@ This challenge is designed to make a climate analysis on Honolulu, Hawaii, to he
 
 This activity uses a Python and SQLAlchemy to make climate analysis and data exploration of the climate database. All of the following analysis completed by using SQLAlchemy ORM queries, Pandas, and Matplotlib.
 
-* Used SQLAlchemy ‘create_engine’ created to connect to the sqlite database. 
+* Used SQLAlchemy ‘create_engine’ to connect to the sqlite database. 
 
 ```
 hawaii_database_path = "./Resources/hawaii.sqlite"
